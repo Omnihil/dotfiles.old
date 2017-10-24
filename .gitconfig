@@ -1,0 +1,11 @@
+[user]
+	name = omnihil
+	email = omnihil@gmail.com
+[credential]
+	helper = cache
+[color]
+	ui = true
+[core]
+	autocrlf = input
+[branch]
+	autosetuprebase = always
