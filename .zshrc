@@ -51,7 +51,7 @@ ZSH_THEME="dieter"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history-substring-search archlinux common-aliases)
+plugins=(git  extract history history-substring-search archlinux common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,9 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.archaliases
+source $HOME/.aliases
 
 #auto-ls
 function chpwd() {
     emulate -L zsh
     ls -a
 }
+
+# add RUBY to $PATH
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# enable extended globbing
+setopt extended_glob

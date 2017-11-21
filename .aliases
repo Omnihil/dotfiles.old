@@ -1,0 +1,22 @@
+# pacaur
+
+alias paupg='pacaur -Syua'
+alias pasu='pacaur -Syua --noconfirm'
+alias pain='pacaur -S'
+alias pains='pacaur -U'
+alias pare='pacaur -R'
+alias parem='pacaur -Rns'
+alias parep='pacaur -Si'
+alias pareps='pacaur -Ss'
+alias paloc='pacaur -Qi'
+alias palocs='pacaur -Qs'
+alias palst='pacaur -Qe'
+alias paorph='pacaur -Qtd'
+alias painsd='pacaur -S --asdeps'
+alias pamir='pacaur -Syy'
+
+# dotfiles a la elliot
+# alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# e for exit shell
+alias e='exit'

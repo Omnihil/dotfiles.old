@@ -1,0 +1,26 @@
+##pacman
+alias p='sudo pacman'
+alias ps='sudo pacman -S'
+alias pu='sudo pacman -Syu'
+alias pq='sudo pacman -Q'
+
+#powerpill
+alias pp='sudo powerpill'
+alias ppu='sudo powerpill -Syu'
+alias ppa='sudo powerpill -Sy'
+
+#pacaur
+alias pas='pacaur -S --noconfirm'
+
+#verschiedenes
+alias md='mkdir'
+
+#upgrade /all
+alias upgradeall='sudo pacman -Syu'
+
+#nvim
+alias vim='nvim'
+alias svim='sudo nvim'
+
+#miscel-mishcell-mishcell-...verschiedenes
+alias open='xdg-open'
