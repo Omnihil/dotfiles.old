@@ -1,0 +1,53 @@
+let searchlimit = 30
+
+" Searchengines
+let searchengine amazon="https://www.amazon.de/s/ref=nb_sb_noss_1/259-8361762-9578227?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=%s"
+let searchengine ebay="https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR12.TRC2.A0.H0.Xcr+2025+akku.TRS0&_nkw=%s&_sacat=0"
+let searchengine yt="https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch"
+let searchengine dogpile = "http://www.dogpile.com/search/web?q=%s"
+let searchengine piratebay = "http://thepiratebay.org/search/%s"
+
+let completionengines = ["google", "amazon", "imdb", "dogpile", "youtube", "google-image", "wikipedia", "duckduckgo"]
+
+
+" Settings
+set nohud
+set nosmoothscroll
+set noautofocus " The opposite of autofocus; this setting stops
+                " sites from focusing on an input box when they load
+set typelinkhints
+let searchlimit = 30
+let scrollstep = 70
+let barposition = "bottom"
+
+let mapleader = ","
+
+" Mappings
+
+map <Leader>r reloadTabUncached
+map <Leader>x :restore<Space>
+map <Leader>z quitChrome
+
+" You can use <Space>, which is interpreted as a
+" literal " " character, to enter buffer completion mode
+map gb :buffer<Space>
+
+map <C-h> :set hud!
+
+" Use paste buffer in mappings
+map T :tabnew wikipedia 
+
+" Displays your public IP address in the status bar
+
+getIP() -> {{
+httpRequest({url: 'http://api.ipify.org/?format=json', json: true},
+            function(res) { Status.setMessage('IP: ' + res.ip); });
+}}
+" Displays your public IP address in the status bar
+map ci :call getIP
+
+let configpath = '/home/omnihil/.cvimrc'
+set localconfig " Update settings via a local file (and the `:source` command) rather
+                " than the default options page in chrome
+" As long as localconfig is set in the .cvimrc file. cVim will continue to read
+" settings from there
